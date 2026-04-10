@@ -1,0 +1,170 @@
+.carousel{
+width: 100%;
+margin: 3em auto;
+display: flex;
+gap: 1em;
+overflow-x: auto;
+scroll-behavior: smooth;
+anchor-name: --carousel;
+scroll-snap-type: x mandatory;
+scroll-marker-group: after;
+}
+.carousel2 {
+width: 100%;
+margin: 3em auto;
+display: flex;
+gap: 1em;
+overflow-x: auto;
+scroll-behavior: smooth;
+anchor-name: --carousel2;
+scroll-snap-type: x mandatory;
+scroll-marker-group: after;
+align-items: end;
+}
+.carousel::scroll-marker-group{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.carousel2::scroll-marker-group{
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+ 
+.card::scroll-marker, .card2::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: rgb(255, 192, 229);
+    border-radius: 50%;
+    margin-top: -2%;
+}
+
+.card::scroll-marker:target-current, .card2::scroll-marker:target-current {
+    background-color: darkblue;
+}
+
+
+.carousel::-webkit-scrollbar,.carousel2::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+    content: '→';
+    border: none;
+    background-color: blueviolet;
+    font-size: 3rem;
+    color: whitesmoke;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    
+}
+.carousel2::scroll-button(right), .carousel2::scroll-button(left) {
+    content: '→';
+    border: none;
+    background-color: blueviolet;
+    font-size: 3rem;
+    color: whitesmoke;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel2;
+    position-area: right center;
+    
+}
+.carousel::scroll-button(left),.carousel2::scroll-button(left) {
+    content: '←';
+     position-area: left center;
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled{
+    opacity: 50%;
+    cursor: auto;
+
+} 
+.carousel2::scroll-button(right):disabled, .carousel2::scroll-button(left):disabled{
+    opacity: 50%;
+    cursor: auto;
+
+} 
+.card{
+scroll-snap-align: start;
+background-color: transparent;
+flex: 0 0 20em;
+aspect-ratio: 3/ 4;
+height: 30rem;
+
+padding: 1em;
+border-radius: .5em;
+text-align: center;
+align-content: center;
+}
+.card2{
+scroll-snap-align: start;
+background-color: transparent;
+flex: 0 0 20em;
+aspect-ratio: 3/4;
+height: 30rem;
+
+padding: 1em;
+border-radius: .5em;
+text-align: center;
+align-content: center;
+}
+.card img{
+    max-height:100%; max-width:100%;
+    border-radius: 5%;
+}
+
+.card2 video {
+    max-height: 100%;
+}
+
+h1{
+    color: whitesmoke;
+   position: relative;
+    
+}
+@media(max-width: 100%) {
+
+  
+    .card{
+        flex: 0 0 100%;
+    }
+    
+    .card2 {
+        flex: 0 0 100%;
+    }
+
+.carousel::-webkit-scrollbar, .carousel2::-webkit-scrollbar {
+    display: block;
+    
+ }
+
+}
+
+body{
+    background: linear-gradient( rgb(2, 2, 37),blueviolet,violet);
+  
+    
+}
+
+
+
+
+
+
+
+
+
