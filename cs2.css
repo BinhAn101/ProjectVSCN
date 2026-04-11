@@ -157,10 +157,12 @@ color: white;
 }
 
 body{
-    background: linear-gradient( rgb(2, 2, 37),blueviolet,violet);
-  
-    
+    background: linear-gradient( rgb(2, 2, 37),blueviolet,violet);   
 }
+ video {
+            border-radius: .5em;
+            overflow: hidden;
+        }
 
 
 
