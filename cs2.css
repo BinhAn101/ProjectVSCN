@@ -132,25 +132,12 @@ align-content: center;
 }
 
 h1{
-color: transparent;
+color: white;
   
-   background: linear-gradient(to right, 
-   violet, pink,rgb(247,12,204),violet);
-   background-clip: text;
    font-weight: bolder;
-
-animation: animate 3s linear infinite;
-background-size: 200% auto;
     
 }
-@keyframes animate {
-    0%{
-        background-position: 200% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
-}
+
 @media(max-width: 100%) {
 
   
